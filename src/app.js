@@ -177,7 +177,9 @@ var BattleScene = cc.Scene.extend({
                     {
                         this.randomWind();
                         this.onThrowEnd(this.roles[i]);
-                        this.roles.splice(i, 1);
+                        if (this.rolses[i].roleType != this.ENUM_ROLE_TYPE_3 ||  this.bulletType != this.ENUM_BULLET_FLOWER) {
+                        	this.roles.splice(i, 1);
+                        };
                         break;
                     }
                 }
